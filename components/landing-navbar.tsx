@@ -15,7 +15,7 @@ export function LandingNavbar() {
           className="rounded-full"
         />
         <span className="font-heading font-bold text-xl text-[color:var(--foreground)] tracking-tight">
-          PayLinkr <span className="text-[color:var(--primary)]">sBTC</span>
+          PayLinkr
         </span>
       </div>
       {/* Nav Links */}
