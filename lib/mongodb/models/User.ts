@@ -36,9 +36,15 @@ export interface IUser extends Document {
     };
   };
   merchant?: {
-    businessName?: string;
+    businessName: string;
+    businessEmail: string;
+    website?: string;
+    status: 'active' | 'pending' | 'inactive' | 'suspended' | 'rejected';
+    isVerified: boolean;
     apiKeys?: IApiKey[];
     webhooks?: IWebhook[];
+    createdAt: Date;
+    updatedAt: Date;
   };
 }
 
@@ -120,9 +126,37 @@ const UserSchema = new Schema<IUser>({
     }
   },
   merchant: {
-    businessName: String,
+    businessName: {
+      type: String,
+      required: false
+    },
+    businessEmail: {
+      type: String,
+      required: false
+    },
+    website: {
+      type: String,
+      required: false
+    },
+    status: {
+      type: String,
+      enum: ['active', 'pending', 'inactive', 'suspended', 'rejected'],
+      default: 'pending'
+    },
+    isVerified: {
+      type: Boolean,
+      default: false
+    },
     apiKeys: [ApiKeySchema],
-    webhooks: [WebhookSchema]
+    webhooks: [WebhookSchema],
+    createdAt: {
+      type: Date,
+      default: Date.now
+    },
+    updatedAt: {
+      type: Date,
+      default: Date.now
+    }
   }
 });
 
