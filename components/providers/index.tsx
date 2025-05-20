@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import { AuthProvider } from "./AuthProvider";
 import { SbtcProvider } from "./SbtcProvider";
+import { PayTagProvider } from "./PayTagProvider";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ThemeProvider } from "next-themes";
 
@@ -14,9 +15,11 @@ export function Providers({ children }: { children: ReactNode }) {
     <QueryClientProvider client={queryClient}>
       <AuthProvider>
         <SbtcProvider>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            {children}
-          </ThemeProvider>
+          <PayTagProvider>
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              {children}
+            </ThemeProvider>
+          </PayTagProvider>
         </SbtcProvider>
       </AuthProvider>
     </QueryClientProvider>
@@ -25,3 +28,4 @@ export function Providers({ children }: { children: ReactNode }) {
 
 export * from "./AuthProvider";
 export * from "./SbtcProvider";
+export * from "./PayTagProvider";

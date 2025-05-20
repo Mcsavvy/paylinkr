@@ -1,4 +1,4 @@
-import ms from 'ms';
+import ms from "ms";
 
 declare global {
   namespace NodeJS {
@@ -16,6 +16,11 @@ declare global {
       JWT_SECRET: string;
       JWT_EXPIRY: ms.StringValue;
       REFRESH_TOKEN_EXPIRY: ms.StringValue;
+      // sBTC
+      NEXT_PUBLIC_SBTC_CONTRACT: string;
+      NEXT_PUBLIC_SBTC_API_URL: string;
+      NEXT_PUBLIC_BTC_API_URL: string;
+      NEXT_PUBLIC_STX_API_URL: string;
     }
   }
 }

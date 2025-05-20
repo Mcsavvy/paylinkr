@@ -38,6 +38,9 @@ importers:
       '@stacks/encryption':
         specifier: ^7.0.6
         version: 7.0.6
+      '@stacks/network':
+        specifier: ^7.0.2
+        version: 7.0.2
       '@stacks/transactions':
         specifier: ^7.0.6
         version: 7.0.6
@@ -98,6 +101,9 @@ importers:
       recharts:
         specifier: ^2.15.3
         version: 2.15.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      sbtc:
+        specifier: ^0.3.2
+        version: 0.3.2
       sonner:
         specifier: ^2.0.3
         version: 2.0.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
@@ -448,6 +454,9 @@ packages:
     resolution: {integrity: sha512-1x3D2xEk2fRo3PAhwQwu5UubzgiVWSXTBfWpVd2Mx2AzRqJuDJCsgaDVZ7HB5iGzDW1Hl1sWN2mFyKjmR9uAog==}
     engines: {node: '>=6.9.0'}
 
+  '@btc-helpers/rpc@2.0.0':
+    resolution: {integrity: sha512-Y5T3MUCW3lMENJiOJEk4DOwTW6GY/b/xmcf+kxoPZZw2uCyY+m3a9wV9wrJdIceqv3ET2iLFbGHjLwl25UYwGA==}
+
   '@emnapi/core@1.4.3':
     resolution: {integrity: sha512-4m62DuCE07lw01soJwPiBGC0nAww0Q+RY70VZ+n49yDIO13yyinhbWCeNnaob0lakDtWQzSdtNWzJeOJt2ma+g==}
 
@@ -733,6 +742,10 @@ packages:
     cpu: [x64]
     os: [win32]
 
+  '@noble/curves@1.9.1':
+    resolution: {integrity: sha512-k11yZxZg+t+gWvBbIswW0yoJlu8cHOC7dhunwOzoWH/mXGBiYyR4YY6hAEK/3EUs4UpB8la1RfdRpeGsFHkWsA==}
+    engines: {node: ^14.21.3 || >=16}
+
   '@noble/hashes@1.1.5':
     resolution: {integrity: sha512-LTMZiiLc+V4v1Yi16TD6aX2gmtKszNye0pQgbaLqkvhIqP7nVsSaJsWloGQjJfJ8offaoP5GtX3yY5swbcJxxQ==}
 
@@ -745,6 +758,9 @@ packages:
 
   '@noble/secp256k1@1.7.2':
     resolution: {integrity: sha512-/qzwYl5eFLH8OWIecQWM31qld2g1NfjgylK+TNhqtaUKP37Nm+Y+z30Fjhw0Ct8p9yCQEm2N3W/AckdIb3SMcQ==}
+
+  '@noble/secp256k1@2.2.3':
+    resolution: {integrity: sha512-l7r5oEQym9Us7EAigzg30/PQAvynhMt2uoYtT3t26eGDVm9Yii5mZ5jWSWmZ/oSIR2Et0xfc6DXrG0bZ787V3w==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -1071,6 +1087,9 @@ packages:
 
   '@scure/bip39@1.1.0':
     resolution: {integrity: sha512-pwrPOS16VeTKg98dYXQyIjJEcWfz7/1YJIwxUEPFfQPtc86Ym/1sVgQ2RLoD43AazMk2l/unK4ITySSpW2+82w==}
+
+  '@scure/btc-signer@1.8.0':
+    resolution: {integrity: sha512-lzf9ugp2hZwP84bdRQuxdX2iib3wyUs7+8+Ph/hanVaXWGOZfSfgEZFaOyocj/Qh0Igt1WHkZh6hdh4KloynNQ==}
 
   '@stacks/common@6.16.0':
     resolution: {integrity: sha512-PnzvhrdGRMVZvxTulitlYafSK4l02gPCBBoI9QEoTqgSnv62oaOXhYAUUkTMFKxdHW1seVEwZsrahuXiZPIAwg==}
@@ -2391,6 +2410,12 @@ packages:
     resolution: {integrity: sha512-8q7VEgMJW4J8tcfVPy8g09NcQwZdbwFEqhe/WZkoIzjn/3TGDwtOCYtXGxA3O8tPzpczCCDgv+P2P5y00ZJOOg==}
     engines: {node: '>= 8'}
 
+  micro-packed@0.6.3:
+    resolution: {integrity: sha512-VmVkyc7lIzAq/XCPFuLc/CwQ7Ehs5XDK3IwqsZHiBIDttAI9Gs7go6Lv4lNRuAIKrGKcRTtthFKUNyHS0S4wJQ==}
+
+  micro-packed@0.7.3:
+    resolution: {integrity: sha512-2Milxs+WNC00TRlem41oRswvw31146GiSaoCT7s3Xi2gMUglW5QBeqlQaZeHr5tJx9nm3i57LNXPqxOOaWtTYg==}
+
   micromatch@4.0.8:
     resolution: {integrity: sha512-PXwfBhYu0hBCPw8Dn0E+WDYb7af3dSLVWKi3HGv84IdF4TyFoC0ysxFd0Goxw7nSv4T/PzEJQxsYsEiFCKo2BA==}
     engines: {node: '>=8.6'}
@@ -2789,6 +2814,9 @@ packages:
   safe-regex-test@1.1.0:
     resolution: {integrity: sha512-x/+Cz4YrimQxQccJf5mKEbIa1NzeCRNI5Ecl/ekmlYaampdNLPalVyIcCZNNH3MvmqBugV5TMYZXv0ljslUlaw==}
     engines: {node: '>= 0.4'}
+
+  sbtc@0.3.2:
+    resolution: {integrity: sha512-NjU9vDz2d1XMBGplT9S1x2IRJTIbZX4wAq8TNEMFiUmaj7MVp/3cJTPHiHmS4P+hIHNfrHLUUoe/i4ToIkp5yw==}
 
   scheduler@0.26.0:
     resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
@@ -3685,6 +3713,13 @@ snapshots:
 
   '@babel/runtime@7.27.1': {}
 
+  '@btc-helpers/rpc@2.0.0':
+    dependencies:
+      '@scure/base': 1.2.5
+      cross-fetch: 3.2.0
+    transitivePeerDependencies:
+      - encoding
+
   '@emnapi/core@1.4.3':
     dependencies:
       '@emnapi/wasi-threads': 1.0.2
@@ -3924,6 +3959,10 @@ snapshots:
   '@next/swc-win32-x64-msvc@15.3.2':
     optional: true
 
+  '@noble/curves@1.9.1':
+    dependencies:
+      '@noble/hashes': 1.8.0
+
   '@noble/hashes@1.1.5': {}
 
   '@noble/hashes@1.8.0': {}
@@ -3931,6 +3970,8 @@ snapshots:
   '@noble/secp256k1@1.7.1': {}
 
   '@noble/secp256k1@1.7.2': {}
+
+  '@noble/secp256k1@2.2.3': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:
@@ -4231,6 +4272,13 @@ snapshots:
     dependencies:
       '@noble/hashes': 1.1.5
       '@scure/base': 1.1.9
+
+  '@scure/btc-signer@1.8.0':
+    dependencies:
+      '@noble/curves': 1.9.1
+      '@noble/hashes': 1.8.0
+      '@scure/base': 1.2.5
+      micro-packed: 0.7.3
 
   '@stacks/common@6.16.0':
     dependencies:
@@ -5716,6 +5764,14 @@ snapshots:
 
   merge2@1.4.1: {}
 
+  micro-packed@0.6.3:
+    dependencies:
+      '@scure/base': 1.1.9
+
+  micro-packed@0.7.3:
+    dependencies:
+      '@scure/base': 1.2.5
+
   micromatch@4.0.8:
     dependencies:
       braces: 3.0.3
@@ -6118,6 +6174,21 @@ snapshots:
       call-bound: 1.0.4
       es-errors: 1.3.0
       is-regex: 1.2.1
+
+  sbtc@0.3.2:
+    dependencies:
+      '@btc-helpers/rpc': 2.0.0
+      '@noble/secp256k1': 2.2.3
+      '@scure/base': 1.2.5
+      '@scure/btc-signer': 1.8.0
+      '@stacks/common': 7.0.2
+      '@stacks/encryption': 7.0.6
+      '@stacks/network': 7.0.2
+      '@stacks/transactions': 7.0.6
+      c32check: 2.0.0
+      micro-packed: 0.6.3
+    transitivePeerDependencies:
+      - encoding
 
   scheduler@0.26.0: {}
 
