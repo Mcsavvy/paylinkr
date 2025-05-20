@@ -1,8 +1,12 @@
+"use client";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Mail } from "lucide-react";
+import { WalletConnectButton } from "@/components/WalletConnectButton";
+import { useWalletConnection } from "@/hooks/useWalletConnection";
 
 export function LandingNavbar() {
+  const { isConnected } = useWalletConnection();
   return (
     <nav className="w-full container mx-auto flex items-center justify-between py-6 px-4 md:px-8 relative z-20">
       {/* Logo */}
@@ -44,14 +48,16 @@ export function LandingNavbar() {
             API
           </a>
         </li>
-        <li>
-          <a
-            href="#dashboard"
-            className="hover:text-[color:var(--primary)] transition-colors"
-          >
-            Dashboard
-          </a>
-        </li>
+        {isConnected && (
+          <li>
+            <a
+              href="/dashboard"
+              className="hover:text-[color:var(--primary)] transition-colors"
+            >
+              Dashboard
+            </a>
+          </li>
+        )}
         <li>
           <a
             href="#contact"
@@ -63,12 +69,7 @@ export function LandingNavbar() {
       </ul>
       {/* Contact Button */}
       <div className="flex items-center gap-2">
-        <Button
-          size="sm"
-          className="bg-[color:var(--background)] text-[color:var(--foreground)] border border-[color:var(--border)] shadow-sm hover:bg-[color:var(--muted)] dark:hover:bg-[color:var(--muted)] px-4 py-2 rounded-md"
-        >
-          <Mail className="w-4 h-4 mr-1" /> Contact us
-        </Button>
+        <WalletConnectButton />
       </div>
     </nav>
   );

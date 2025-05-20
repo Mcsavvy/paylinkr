@@ -5,7 +5,19 @@ import { Code2, ShoppingCart } from "lucide-react";
 const wallets = [
   {
     name: "Xverse",
-    logo: "/xverse.png",
+    logo: "/xverse.svg",
+  },
+  {
+    name: "Leather",
+    logo: "/leather.svg",
+  },
+  {
+    name: "Asigna",
+    logo: "/asigna.svg",
+  },
+  {
+    name: "Fordefi",
+    logo: "/fordefi.svg",
   },
 ];
 

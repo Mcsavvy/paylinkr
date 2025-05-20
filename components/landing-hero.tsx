@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Lottie from "lottie-react";
 import walletAnimation from "@/public/wallet.json";
 import { useTheme } from "next-themes";
+import { WalletConnectButton } from "@/components/WalletConnectButton";
 
 const GRID_LINES = 16;
 

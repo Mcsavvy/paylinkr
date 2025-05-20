@@ -13,6 +13,7 @@ import { LandingTestimonials } from "@/components/landing-testimonials";
 import { LandingPricing } from "@/components/landing-pricing";
 import { LandingFAQ } from "@/components/landing-faq";
 import { LandingFinalCTA } from "@/components/landing-final-cta";
+import { WalletConnectButton } from "@/components/WalletConnectButton";
 
 export default function Home() {
   useLenis();
@@ -31,6 +32,7 @@ export default function Home() {
         <LandingPricing />
         <LandingFAQ />
         <LandingFinalCTA />
+        <WalletConnectButton />
       </main>
       <LandingFooter />
     </div>

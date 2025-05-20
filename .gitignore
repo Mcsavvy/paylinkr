@@ -42,3 +42,7 @@ next-env.d.ts
 .vscode
 .cursor
 styleguide.md
+
+# dotenv environment variables
+.env
+.windsurfrules

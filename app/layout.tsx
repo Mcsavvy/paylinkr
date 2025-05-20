@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { AuthProvider } from "@/components/providers/AuthProvider";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,12 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`antialiased`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <div style={{ position: "fixed", top: 16, right: 16, zIndex: 50 }}>
-            <ThemeToggle />
-          </div>
-          {children}
-        </ThemeProvider>
+        <AuthProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <div style={{ position: "fixed", top: 16, right: 16, zIndex: 50 }}>
+              <ThemeToggle />
+            </div>
+            {children}
+          </ThemeProvider>
+        </AuthProvider>
       </body>
     </html>
   );
