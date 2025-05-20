@@ -1,8 +1,8 @@
  import { NextResponse } from 'next/server';
 import { getServerSession } from 'next-auth';
 import { authOptions } from '@/lib/auth';
-import { connectToDatabase } from '@/lib/mongodb';
-import { User } from '@/models';
+import connectToDatabase from '@/lib/mongodb';
+import { User } from '@/lib/mongodb/models';
 
 type MerchantStatus = 'active' | 'pending' | 'inactive' | 'suspended' | 'rejected';
 
