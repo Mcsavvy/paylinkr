@@ -8,16 +8,6 @@
 
 ---
 
-##  Demo
-
-📍 Live URL: `https://your-app.com`
-
-🧪 Testnet only: Please use the Hiro Testnet Wallet + sBTC faucet.
-
-
-
----
-
 ## ✨ Features
 
 * 🔗 Generate PayTag links to request sBTC (like “\$CashTag” but on Bitcoin)
