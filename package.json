@@ -22,6 +22,7 @@
     "@stacks/network": "^7.0.2",
     "@stacks/transactions": "^7.0.6",
     "@tanstack/react-query": "^5.76.1",
+    "@types/uuid": "^10.0.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "framer-motion": "^12.12.1",
@@ -43,6 +44,7 @@
     "sbtc": "^0.3.2",
     "sonner": "^2.0.3",
     "tailwind-merge": "^3.3.0",
+    "uuid": "^11.1.0",
     "vaul": "^1.1.2",
     "zod": "^3.25.7",
     "zustand": "^5.0.4"
