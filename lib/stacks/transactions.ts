@@ -61,9 +61,9 @@ export async function createPayTag(
   // Broadcast to network
   const result = await broadcastTransaction({ transaction, network: NETWORK });
 
-  // @ts-ignore
+  // @ts-expect-error ...
   if (result.error) {
-    // @ts-ignore
+    // @ts-expect-error ...
     throw new Error(`Failed to create PayTag: ${result.error}`);
   }
 

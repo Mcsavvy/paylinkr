@@ -6,11 +6,11 @@ if (!MONGO_URI) {
   throw new Error('Please define the MONGO_URI environment variable inside .env.local');
 }
 
-// @ts-ignore
+// @ts-expect-error ...
 let cached = global.mongoose;
 
 if (!cached) {
-  // @ts-ignore
+  // @ts-expect-error ...
   cached = global.mongoose = { conn: null, promise: null };
 }
 

@@ -56,19 +56,29 @@ export default function DashboardPage() {
               <CardTitle className="text-sm font-medium text-muted-foreground">
                 {stat.title}
               </CardTitle>
-              <div className="rounded-md p-2 bg-accent/10">
-                {stat.icon}
-              </div>
+              <div className="rounded-md p-2 bg-accent/10">{stat.icon}</div>
             </CardHeader>
             <CardContent>
               <div className="text-2xl font-bold">{stat.value}</div>
               <p className="text-xs text-muted-foreground">
-                {/* @ts-ignore */}
-                <span className={stat.trend === "up" ? "text-green-500" : stat.trend === "down" ? "text-red-500" : "text-amber-500"}>
+                {/* @ts-expect-error ... */}
+                <span
+                  className={
+                    stat.trend === "up"
+                      ? "text-green-500"
+                      : stat.trend === "down"
+                      ? "text-red-500"
+                      : "text-amber-500"
+                  }
+                >
                   {stat.change}
                 </span>{" "}
-                {/* @ts-ignore */}
-                {stat.trend === "up" ? "from last month" : stat.trend === "down" ? "from last month" : "waiting"}
+                {/* @ts-expect-error ... */}
+                {stat.trend === "up"
+                  ? "from last month"
+                  : stat.trend === "down"
+                  ? "from last month"
+                  : "waiting"}
               </p>
             </CardContent>
           </Card>
@@ -100,7 +110,10 @@ export default function DashboardPage() {
         <CardHeader>
           <div className="flex items-center justify-between">
             <CardTitle>Recent Activity</CardTitle>
-            <Link href="/dashboard/payments" className="text-sm text-primary hover:underline">
+            <Link
+              href="/dashboard/payments"
+              className="text-sm text-primary hover:underline"
+            >
               View all
             </Link>
           </div>
@@ -108,14 +121,19 @@ export default function DashboardPage() {
         <CardContent>
           <div className="space-y-4">
             {[1, 2, 3].map((i) => (
-              <div key={i} className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0">
+              <div
+                key={i}
+                className="flex items-center justify-between border-b pb-4 last:border-0 last:pb-0"
+              >
                 <div className="flex items-center space-x-4">
                   <div className="rounded-full bg-primary/10 p-2">
                     <ArrowUpRight className="h-4 w-4 text-primary" />
                   </div>
                   <div>
                     <p className="font-medium">Payment Received</p>
-                    <p className="text-sm text-muted-foreground">From 1ABC...xyz</p>
+                    <p className="text-sm text-muted-foreground">
+                      From 1ABC...xyz
+                    </p>
                   </div>
                 </div>
                 <div className="text-right">

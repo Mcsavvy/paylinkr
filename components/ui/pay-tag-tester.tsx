@@ -75,7 +75,7 @@ export function PayTagTester() {
     setAction("fulfill");
     try {
       const txId = fulfillPayTag({ id: payTag.id });
-      // @ts-ignore
+      // @ts-expect-error ...
       setTxId(txId);
       setSuccess(true);
     } catch (error: any) {
@@ -90,7 +90,7 @@ export function PayTagTester() {
     setAction("cancel");
     try {
       const txId = cancelPayTag({ id: payTag.id });
-      // @ts-ignore
+      // @ts-expect-error ...
       setTxId(txId);
       setSuccess(true);
     } catch (error: any) {

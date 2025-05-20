@@ -140,7 +140,7 @@ export async function POST(req: NextRequest) {
       }
 
       // Add merchantId to the tag
-      // @ts-ignore
+      // @ts-expect-error ...
       data.merchant = user._id;
     }
 
